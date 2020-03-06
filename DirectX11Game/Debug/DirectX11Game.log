@@ -1,0 +1,121 @@
+﻿  main.cpp
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\dxgitype.h(12,1): warning C4005:  'DXGI_STATUS_OCCLUDED': macro redefinition
+D:\Windows Kits\10\Include\10.0.17763.0\shared\winerror.h(55460): message :  see previous definition of 'DXGI_STATUS_OCCLUDED'
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\dxgitype.h(13,1): warning C4005:  'DXGI_STATUS_CLIPPED': macro redefinition
+D:\Windows Kits\10\Include\10.0.17763.0\shared\winerror.h(55469): message :  see previous definition of 'DXGI_STATUS_CLIPPED'
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\dxgitype.h(14,1): warning C4005:  'DXGI_STATUS_NO_REDIRECTION': macro redefinition
+D:\Windows Kits\10\Include\10.0.17763.0\shared\winerror.h(55478): message :  see previous definition of 'DXGI_STATUS_NO_REDIRECTION'
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\dxgitype.h(15,1): warning C4005:  'DXGI_STATUS_NO_DESKTOP_ACCESS': macro redefinition
+D:\Windows Kits\10\Include\10.0.17763.0\shared\winerror.h(55487): message :  see previous definition of 'DXGI_STATUS_NO_DESKTOP_ACCESS'
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\dxgitype.h(16,1): warning C4005:  'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE': macro redefinition
+D:\Windows Kits\10\Include\10.0.17763.0\shared\winerror.h(55496): message :  see previous definition of 'DXGI_STATUS_GRAPHICS_VIDPN_SOURCE_IN_USE'
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\dxgitype.h(17,1): warning C4005:  'DXGI_STATUS_MODE_CHANGED': macro redefinition
+D:\Windows Kits\10\Include\10.0.17763.0\shared\winerror.h(55505): message :  see previous definition of 'DXGI_STATUS_MODE_CHANGED'
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\dxgitype.h(18,1): warning C4005:  'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS': macro redefinition
+D:\Windows Kits\10\Include\10.0.17763.0\shared\winerror.h(55514): message :  see previous definition of 'DXGI_STATUS_MODE_CHANGE_IN_PROGRESS'
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\dxgitype.h(21,1): warning C4005:  'DXGI_ERROR_INVALID_CALL': macro redefinition
+D:\Windows Kits\10\Include\10.0.17763.0\shared\winerror.h(55529): message :  see previous definition of 'DXGI_ERROR_INVALID_CALL'
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\dxgitype.h(22,1): warning C4005:  'DXGI_ERROR_NOT_FOUND': macro redefinition
+D:\Windows Kits\10\Include\10.0.17763.0\shared\winerror.h(55538): message :  see previous definition of 'DXGI_ERROR_NOT_FOUND'
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\dxgitype.h(23,1): warning C4005:  'DXGI_ERROR_MORE_DATA': macro redefinition
+D:\Windows Kits\10\Include\10.0.17763.0\shared\winerror.h(55547): message :  see previous definition of 'DXGI_ERROR_MORE_DATA'
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\dxgitype.h(24,1): warning C4005:  'DXGI_ERROR_UNSUPPORTED': macro redefinition
+D:\Windows Kits\10\Include\10.0.17763.0\shared\winerror.h(55556): message :  see previous definition of 'DXGI_ERROR_UNSUPPORTED'
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\dxgitype.h(25,1): warning C4005:  'DXGI_ERROR_DEVICE_REMOVED': macro redefinition
+D:\Windows Kits\10\Include\10.0.17763.0\shared\winerror.h(55565): message :  see previous definition of 'DXGI_ERROR_DEVICE_REMOVED'
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\dxgitype.h(26,1): warning C4005:  'DXGI_ERROR_DEVICE_HUNG': macro redefinition
+D:\Windows Kits\10\Include\10.0.17763.0\shared\winerror.h(55574): message :  see previous definition of 'DXGI_ERROR_DEVICE_HUNG'
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\dxgitype.h(27,1): warning C4005:  'DXGI_ERROR_DEVICE_RESET': macro redefinition
+D:\Windows Kits\10\Include\10.0.17763.0\shared\winerror.h(55584): message :  see previous definition of 'DXGI_ERROR_DEVICE_RESET'
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\dxgitype.h(28,1): warning C4005:  'DXGI_ERROR_WAS_STILL_DRAWING': macro redefinition
+D:\Windows Kits\10\Include\10.0.17763.0\shared\winerror.h(55593): message :  see previous definition of 'DXGI_ERROR_WAS_STILL_DRAWING'
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\dxgitype.h(29,1): warning C4005:  'DXGI_ERROR_FRAME_STATISTICS_DISJOINT': macro redefinition
+D:\Windows Kits\10\Include\10.0.17763.0\shared\winerror.h(55603): message :  see previous definition of 'DXGI_ERROR_FRAME_STATISTICS_DISJOINT'
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\dxgitype.h(30,1): warning C4005:  'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE': macro redefinition
+D:\Windows Kits\10\Include\10.0.17763.0\shared\winerror.h(55612): message :  see previous definition of 'DXGI_ERROR_GRAPHICS_VIDPN_SOURCE_IN_USE'
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\dxgitype.h(31,1): warning C4005:  'DXGI_ERROR_DRIVER_INTERNAL_ERROR': macro redefinition
+D:\Windows Kits\10\Include\10.0.17763.0\shared\winerror.h(55622): message :  see previous definition of 'DXGI_ERROR_DRIVER_INTERNAL_ERROR'
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\dxgitype.h(32,1): warning C4005:  'DXGI_ERROR_NONEXCLUSIVE': macro redefinition
+D:\Windows Kits\10\Include\10.0.17763.0\shared\winerror.h(55631): message :  see previous definition of 'DXGI_ERROR_NONEXCLUSIVE'
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\dxgitype.h(33,1): warning C4005:  'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE': macro redefinition
+D:\Windows Kits\10\Include\10.0.17763.0\shared\winerror.h(55640): message :  see previous definition of 'DXGI_ERROR_NOT_CURRENTLY_AVAILABLE'
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\dxgitype.h(34,1): warning C4005:  'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED': macro redefinition
+D:\Windows Kits\10\Include\10.0.17763.0\shared\winerror.h(55650): message :  see previous definition of 'DXGI_ERROR_REMOTE_CLIENT_DISCONNECTED'
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\dxgitype.h(35,1): warning C4005:  'DXGI_ERROR_REMOTE_OUTOFMEMORY': macro redefinition
+D:\Windows Kits\10\Include\10.0.17763.0\shared\winerror.h(55659): message :  see previous definition of 'DXGI_ERROR_REMOTE_OUTOFMEMORY'
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\d3d11.h(917,1): warning C4005:  'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': macro redefinition
+D:\Windows Kits\10\Include\10.0.17763.0\shared\winerror.h(55923): message :  see previous definition of 'D3D11_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\d3d11.h(918,1): warning C4005:  'D3D11_ERROR_FILE_NOT_FOUND': macro redefinition
+D:\Windows Kits\10\Include\10.0.17763.0\shared\winerror.h(55932): message :  see previous definition of 'D3D11_ERROR_FILE_NOT_FOUND'
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\d3d11.h(919,1): warning C4005:  'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS': macro redefinition
+D:\Windows Kits\10\Include\10.0.17763.0\shared\winerror.h(55942): message :  see previous definition of 'D3D11_ERROR_TOO_MANY_UNIQUE_VIEW_OBJECTS'
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\d3d11.h(920,1): warning C4005:  'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD': macro redefinition
+D:\Windows Kits\10\Include\10.0.17763.0\shared\winerror.h(55951): message :  see previous definition of 'D3D11_ERROR_DEFERRED_CONTEXT_MAP_WITHOUT_INITIAL_DISCARD'
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\d3d10.h(608,1): warning C4005:  'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS': macro redefinition
+D:\Windows Kits\10\Include\10.0.17763.0\shared\winerror.h(55899): message :  see previous definition of 'D3D10_ERROR_TOO_MANY_UNIQUE_STATE_OBJECTS'
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\d3d10.h(609,1): warning C4005:  'D3D10_ERROR_FILE_NOT_FOUND': macro redefinition
+D:\Windows Kits\10\Include\10.0.17763.0\shared\winerror.h(55908): message :  see previous definition of 'D3D10_ERROR_FILE_NOT_FOUND'
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2662,52): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2662,64): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2662,76): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2662,88): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2663,52): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2663,64): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2663,76): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2664,52): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2664,64): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2664,76): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2665,52): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2666,64): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2667,76): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2668,88): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2689,46): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2689,58): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2689,70): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2689,82): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2690,88): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2691,88): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2694,88): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2695,88): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2698,64): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2702,76): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2702,88): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2712,65): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2712,91): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2713,52): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2713,78): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2715,52): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2716,52): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2716,65): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2717,52): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2717,65): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2717,78): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2727,54): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2728,56): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2729,58): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2730,54): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2730,65): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2731,56): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2731,67): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2732,54): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2732,67): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2742,60): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2742,79): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2743,70): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamath.h(2754,73): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamathconvert.inl(2254,71): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamathconvert.inl(4523,69): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamathconvert.inl(4577,68): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamathconvert.inl(4639,65): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamathconvert.inl(4707,64): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamathconvert.inl(4770,64): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamathconvert.inl(4832,63): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamathvector.inl(1269,45): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamathvector.inl(1269,56): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamathvector.inl(1269,67): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamathvector.inl(1269,78): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamathmisc.inl(518,43): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamathmisc.inl(519,40): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamathmisc.inl(519,51): warning C4838:  conversion from 'unsigned int' to 'INT' requires a narrowing conversion
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes\xnamathmisc.inl(519,51): warning C4838: D:\Поделки\TestGame\DirectX11Game\DirectX11Game\main.cpp(345) : warning C4715: 'InitGeometry': not all control paths return a value
+  DirectX11Game.vcxproj -> D:\Поделки\TestGame\DirectX11Game\Debug\DirectX11Game.exe
