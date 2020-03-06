@@ -86,8 +86,8 @@ HRESULT InitWindow(HINSTANCE hInstance, int nCmdShow)
     wcex.hCursor = LoadCursor(NULL, IDC_ARROW);
     wcex.hbrBackground = (HBRUSH)(COLOR_WINDOW + 1);
     wcex.lpszMenuName = NULL;
-    wcex.lpszClassName = "Urok01WindowClass";
-    wcex.hIconSm = LoadIcon(wcex.hInstance, "IDI_ICON1");
+    wcex.lpszClassName = L"Urok01WindowClass";
+    wcex.hIconSm = LoadIcon(wcex.hInstance, L"IDI_ICON1");
 
     if (!RegisterClassEx(&wcex))
         return E_FAIL;
@@ -96,7 +96,7 @@ HRESULT InitWindow(HINSTANCE hInstance, int nCmdShow)
     g_hInst = hInstance;
     RECT rc = { 0, 0, 640, 480 };
     AdjustWindowRect(&rc, WS_OVERLAPPEDWINDOW, FALSE);
-    g_hWnd = CreateWindow("Urok01WindowClass", "Урок 1: Создание устройств Direct3D", WS_OVERLAPPEDWINDOW,
+    g_hWnd = CreateWindow(L"Urok01WindowClass", L"Урок 1: Создание устройств Direct3D", WS_OVERLAPPEDWINDOW,
         CW_USEDEFAULT, CW_USEDEFAULT, rc.right - rc.left, rc.bottom - rc.top, NULL, NULL, hInstance, NULL);
     if (!g_hWnd)
         return E_FAIL;
@@ -246,7 +246,7 @@ void Render()
     g_pSwapChain->Present(0, 0);
 }
 
-HRESULT CompileShaderFromFile(LPCSTR szFileName, LPCSTR szEntryPoint, LPCSTR szShaderModel, ID3DBlob** ppBlobOut)
+HRESULT CompileShaderFromFile(LPCWSTR szFileName, LPCSTR szEntryPoint, LPCSTR szShaderModel, ID3DBlob** ppBlobOut)
 {
     HRESULT hr = S_OK;
     DWORD dwShaderFlags = D3DCOMPILE_ENABLE_STRICTNESS;
@@ -271,10 +271,10 @@ HRESULT InitGeometry()
 
     // Компиляция вершинного шейдера из файла
     ID3DBlob* pVSBlob = NULL; // Вспомогательный объект - просто место в оперативной памяти
-    hr = CompileShaderFromFile("urok2.fx", "VS", "vs_4_0", &pVSBlob);
+    hr = CompileShaderFromFile(L"urok2.fx", "VS", "vs_4_0", &pVSBlob);
     if (FAILED(hr))
     {
-        MessageBox(NULL, "Невозможно скомпилировать файл FX. Пожалуйста, запустите данную программу из папки, содержащей файл FX.", "Ошибка", MB_OK);
+        MessageBox(NULL, L"Невозможно скомпилировать файл FX. Пожалуйста, запустите данную программу из папки, содержащей файл FX.", L"Ошибка", MB_OK);
         return hr;
     }
 
@@ -302,10 +302,10 @@ HRESULT InitGeometry()
 
     // Компиляция пиксельного шейдера из файла
     ID3DBlob* pPSBlob = NULL;
-    hr = CompileShaderFromFile("urok2.fx", "PS", "ps_4_0", &pPSBlob);
+    hr = CompileShaderFromFile(L"urok2.fx", "PS", "ps_4_0", &pPSBlob);
     if (FAILED(hr))
     {
-        MessageBox(NULL, "Невозможно скомпилировать файл FX. Пожалуйста, запустите данную программу из папки, содержащей файл FX.", "Ошибка", MB_OK);
+        MessageBox(NULL, L"Невозможно скомпилировать файл FX. Пожалуйста, запустите данную программу из папки, содержащей файл FX.", L"Ошибка", MB_OK);
         return hr;
     }
 
