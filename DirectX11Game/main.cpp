@@ -1,4 +1,4 @@
-#include <windows.h>
+п»ї#include <windows.h>
 #include <d3d11.h>
 #include <d3dx11.h>
 #include <d3dcompiler.h>
@@ -9,26 +9,26 @@ HINSTANCE               g_hInst = NULL;
 HWND                    g_hWnd = NULL;
 D3D_DRIVER_TYPE         g_driverType = D3D_DRIVER_TYPE_NULL;
 D3D_FEATURE_LEVEL       g_featureLevel = D3D_FEATURE_LEVEL_11_0;
-ID3D11Device* g_pd3dDevice = NULL;          // Устройство (для создания объектов)
-ID3D11DeviceContext* g_pImmediateContext = NULL;   // Контекст устройства (рисование)
-IDXGISwapChain* g_pSwapChain = NULL;          // Цепь связи (буфера с экраном)
-ID3D11RenderTargetView* g_pRenderTargetView = NULL;   // Объект заднего буфера
-ID3D11VertexShader* g_pVertexShader = NULL;             // Вершинный шейдер
-ID3D11PixelShader* g_pPixelShader = NULL;        // Пиксельный шейдер
-ID3D11InputLayout* g_pVertexLayout = NULL;             // Описание формата вершин
-ID3D11Buffer* g_pVertexBuffer = NULL;         // Буфер вершин
+ID3D11Device* g_pd3dDevice = NULL;          // РЈСЃС‚СЂРѕР№СЃС‚РІРѕ (РґР»СЏ СЃРѕР·РґР°РЅРёСЏ РѕР±СЉРµРєС‚РѕРІ)
+ID3D11DeviceContext* g_pImmediateContext = NULL;   // РљРѕРЅС‚РµРєСЃС‚ СѓСЃС‚СЂРѕР№СЃС‚РІР° (СЂРёСЃРѕРІР°РЅРёРµ)
+IDXGISwapChain* g_pSwapChain = NULL;          // Р¦РµРїСЊ СЃРІСЏР·Рё (Р±СѓС„РµСЂР° СЃ СЌРєСЂР°РЅРѕРј)
+ID3D11RenderTargetView* g_pRenderTargetView = NULL;   // РћР±СЉРµРєС‚ Р·Р°РґРЅРµРіРѕ Р±СѓС„РµСЂР°
+ID3D11VertexShader* g_pVertexShader = NULL;             // Р’РµСЂС€РёРЅРЅС‹Р№ С€РµР№РґРµСЂ
+ID3D11PixelShader* g_pPixelShader = NULL;        // РџРёРєСЃРµР»СЊРЅС‹Р№ С€РµР№РґРµСЂ
+ID3D11InputLayout* g_pVertexLayout = NULL;             // РћРїРёСЃР°РЅРёРµ С„РѕСЂРјР°С‚Р° РІРµСЂС€РёРЅ
+ID3D11Buffer* g_pVertexBuffer = NULL;         // Р‘СѓС„РµСЂ РІРµСЂС€РёРЅ
 
 struct SimpleVertex
 {
     XMFLOAT3 Pos;
 };
 
-HRESULT InitWindow(HINSTANCE hInstance, int nCmdShow);  // Создание окна
-HRESULT InitDevice();      // Инициализация устройств DirectX
-HRESULT InitGeometry();    // Инициализация шаблона ввода и буфера вершин
-void CleanupDevice();      // Удаление созданнных устройств DirectX
-LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);       // Функция окна
-void Render();      // Функция рисования
+HRESULT InitWindow(HINSTANCE hInstance, int nCmdShow);  // РЎРѕР·РґР°РЅРёРµ РѕРєРЅР°
+HRESULT InitDevice();      // РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ СѓСЃС‚СЂРѕР№СЃС‚РІ DirectX
+HRESULT InitGeometry();    // РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ С€Р°Р±Р»РѕРЅР° РІРІРѕРґР° Рё Р±СѓС„РµСЂР° РІРµСЂС€РёРЅ
+void CleanupDevice();      // РЈРґР°Р»РµРЅРёРµ СЃРѕР·РґР°РЅРЅРЅС‹С… СѓСЃС‚СЂРѕР№СЃС‚РІ DirectX
+LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);       // Р¤СѓРЅРєС†РёСЏ РѕРєРЅР°
+void Render();      // Р¤СѓРЅРєС†РёСЏ СЂРёСЃРѕРІР°РЅРёСЏ
 
 int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLine, int nCmdShow)
 {
@@ -50,7 +50,7 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLi
         return 0;
     }
 
-    // Главный цикл сообщений
+    // Р“Р»Р°РІРЅС‹Р№ С†РёРєР» СЃРѕРѕР±С‰РµРЅРёР№
 
     MSG msg = { 0 };
     while (WM_QUIT != msg.message)
@@ -60,9 +60,9 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLi
             TranslateMessage(&msg);
             DispatchMessage(&msg);
         }
-        else // Если сообщений нет
+        else // Р•СЃР»Рё СЃРѕРѕР±С‰РµРЅРёР№ РЅРµС‚
         {
-            Render();      // Рисуем
+            Render();      // Р РёСЃСѓРµРј
         }
 
     }
@@ -74,7 +74,7 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLi
 
 HRESULT InitWindow(HINSTANCE hInstance, int nCmdShow)
 {
-    // Регистрация класса
+    // Р РµРіРёСЃС‚СЂР°С†РёСЏ РєР»Р°СЃСЃР°
     WNDCLASSEX wcex;
     wcex.cbSize = sizeof(WNDCLASSEX);
     wcex.style = CS_HREDRAW | CS_VREDRAW;
@@ -92,11 +92,11 @@ HRESULT InitWindow(HINSTANCE hInstance, int nCmdShow)
     if (!RegisterClassEx(&wcex))
         return E_FAIL;
 
-    // Создание окна
+    // РЎРѕР·РґР°РЅРёРµ РѕРєРЅР°
     g_hInst = hInstance;
     RECT rc = { 0, 0, 640, 480 };
     AdjustWindowRect(&rc, WS_OVERLAPPEDWINDOW, FALSE);
-    g_hWnd = CreateWindow(L"Urok01WindowClass", L"Урок 1: Создание устройств Direct3D", WS_OVERLAPPEDWINDOW,
+    g_hWnd = CreateWindow(L"Urok01WindowClass", L"РЈСЂРѕРє 1: РЎРѕР·РґР°РЅРёРµ СѓСЃС‚СЂРѕР№СЃС‚РІ Direct3D", WS_OVERLAPPEDWINDOW,
         CW_USEDEFAULT, CW_USEDEFAULT, rc.right - rc.left, rc.bottom - rc.top, NULL, NULL, hInstance, NULL);
     if (!g_hWnd)
         return E_FAIL;
@@ -135,8 +135,8 @@ HRESULT InitDevice()
 
     RECT rc;
     GetClientRect(g_hWnd, &rc);
-    UINT width = rc.right - rc.left;           // получаем ширину
-    UINT height = rc.bottom - rc.top;   // и высоту окна
+    UINT width = rc.right - rc.left;           // РїРѕР»СѓС‡Р°РµРј С€РёСЂРёРЅСѓ
+    UINT height = rc.bottom - rc.top;   // Рё РІС‹СЃРѕС‚Сѓ РѕРєРЅР°
     UINT createDeviceFlags = 0;
 
     D3D_DRIVER_TYPE driverTypes[] =
@@ -148,7 +148,7 @@ HRESULT InitDevice()
 
     UINT numDriverTypes = ARRAYSIZE(driverTypes);
 
-    // Тут мы создаем список поддерживаемых версий DirectX
+    // РўСѓС‚ РјС‹ СЃРѕР·РґР°РµРј СЃРїРёСЃРѕРє РїРѕРґРґРµСЂР¶РёРІР°РµРјС‹С… РІРµСЂСЃРёР№ DirectX
     D3D_FEATURE_LEVEL featureLevels[] =
     {
         D3D_FEATURE_LEVEL_11_0,
@@ -158,49 +158,49 @@ HRESULT InitDevice()
 
     UINT numFeatureLevels = ARRAYSIZE(featureLevels);
 
-    // Сейчас мы создадим устройства DirectX. Для начала заполним структуру,
-    // которая описывает свойства переднего буфера и привязывает его к нашему окну.
-    DXGI_SWAP_CHAIN_DESC sd;            // Структура, описывающая цепь связи (Swap Chain)
-    ZeroMemory(&sd, sizeof(sd));    // очищаем ее
-    sd.BufferCount = 1;                               // у нас один задний буфер
-    sd.BufferDesc.Width = width;                     // ширина буфера
-    sd.BufferDesc.Height = height;                          // высота буфера
-    sd.BufferDesc.Format = DXGI_FORMAT_R8G8B8A8_UNORM;      // формат пикселя в буфере
-    sd.BufferDesc.RefreshRate.Numerator = 60;         // частота обновления экрана
+    // РЎРµР№С‡Р°СЃ РјС‹ СЃРѕР·РґР°РґРёРј СѓСЃС‚СЂРѕР№СЃС‚РІР° DirectX. Р”Р»СЏ РЅР°С‡Р°Р»Р° Р·Р°РїРѕР»РЅРёРј СЃС‚СЂСѓРєС‚СѓСЂСѓ,
+    // РєРѕС‚РѕСЂР°СЏ РѕРїРёСЃС‹РІР°РµС‚ СЃРІРѕР№СЃС‚РІР° РїРµСЂРµРґРЅРµРіРѕ Р±СѓС„РµСЂР° Рё РїСЂРёРІСЏР·С‹РІР°РµС‚ РµРіРѕ Рє РЅР°С€РµРјСѓ РѕРєРЅСѓ.
+    DXGI_SWAP_CHAIN_DESC sd;            // РЎС‚СЂСѓРєС‚СѓСЂР°, РѕРїРёСЃС‹РІР°СЋС‰Р°СЏ С†РµРїСЊ СЃРІСЏР·Рё (Swap Chain)
+    ZeroMemory(&sd, sizeof(sd));    // РѕС‡РёС‰Р°РµРј РµРµ
+    sd.BufferCount = 1;                               // Сѓ РЅР°СЃ РѕРґРёРЅ Р·Р°РґРЅРёР№ Р±СѓС„РµСЂ
+    sd.BufferDesc.Width = width;                     // С€РёСЂРёРЅР° Р±СѓС„РµСЂР°
+    sd.BufferDesc.Height = height;                          // РІС‹СЃРѕС‚Р° Р±СѓС„РµСЂР°
+    sd.BufferDesc.Format = DXGI_FORMAT_R8G8B8A8_UNORM;      // С„РѕСЂРјР°С‚ РїРёРєСЃРµР»СЏ РІ Р±СѓС„РµСЂРµ
+    sd.BufferDesc.RefreshRate.Numerator = 60;         // С‡Р°СЃС‚РѕС‚Р° РѕР±РЅРѕРІР»РµРЅРёСЏ СЌРєСЂР°РЅР°
     sd.BufferDesc.RefreshRate.Denominator = 1;
-    sd.BufferUsage = DXGI_USAGE_RENDER_TARGET_OUTPUT; // назначение буфера - задний буфер
-    sd.OutputWindow = g_hWnd;                               // привязываем к нашему окну
+    sd.BufferUsage = DXGI_USAGE_RENDER_TARGET_OUTPUT; // РЅР°Р·РЅР°С‡РµРЅРёРµ Р±СѓС„РµСЂР° - Р·Р°РґРЅРёР№ Р±СѓС„РµСЂ
+    sd.OutputWindow = g_hWnd;                               // РїСЂРёРІСЏР·С‹РІР°РµРј Рє РЅР°С€РµРјСѓ РѕРєРЅСѓ
     sd.SampleDesc.Count = 1;
     sd.SampleDesc.Quality = 0;
-    sd.Windowed = TRUE;                               // не полноэкранный режим
+    sd.Windowed = TRUE;                               // РЅРµ РїРѕР»РЅРѕСЌРєСЂР°РЅРЅС‹Р№ СЂРµР¶РёРј
 
     for (UINT driverTypeIndex = 0; driverTypeIndex < numDriverTypes; driverTypeIndex++)
     {
         g_driverType = driverTypes[driverTypeIndex];
         hr = D3D11CreateDeviceAndSwapChain(NULL, g_driverType, NULL, createDeviceFlags, featureLevels, numFeatureLevels,
             D3D11_SDK_VERSION, &sd, &g_pSwapChain, &g_pd3dDevice, &g_featureLevel, &g_pImmediateContext);
-        if (SUCCEEDED(hr)) // Если устройства созданы успешно, то выходим из цикла
+        if (SUCCEEDED(hr)) // Р•СЃР»Рё СѓСЃС‚СЂРѕР№СЃС‚РІР° СЃРѕР·РґР°РЅС‹ СѓСЃРїРµС€РЅРѕ, С‚Рѕ РІС‹С…РѕРґРёРј РёР· С†РёРєР»Р°
             break;
     }
 
     if (FAILED(hr)) return hr;
 
-    // Теперь создаем задний буфер. Обратите внимание, в SDK
-    // RenderTargetOutput - это передний буфер, а RenderTargetView - задний.
+    // РўРµРїРµСЂСЊ СЃРѕР·РґР°РµРј Р·Р°РґРЅРёР№ Р±СѓС„РµСЂ. РћР±СЂР°С‚РёС‚Рµ РІРЅРёРјР°РЅРёРµ, РІ SDK
+    // RenderTargetOutput - СЌС‚Рѕ РїРµСЂРµРґРЅРёР№ Р±СѓС„РµСЂ, Р° RenderTargetView - Р·Р°РґРЅРёР№.
     ID3D11Texture2D* pBackBuffer = NULL;
     hr = g_pSwapChain->GetBuffer(0, __uuidof(ID3D11Texture2D), (LPVOID*)& pBackBuffer);
     if (FAILED(hr)) return hr;
 
-    // Я уже упоминал, что интерфейс g_pd3dDevice будет
-    // использоваться для создания остальных объектов
+    // РЇ СѓР¶Рµ СѓРїРѕРјРёРЅР°Р», С‡С‚Рѕ РёРЅС‚РµСЂС„РµР№СЃ g_pd3dDevice Р±СѓРґРµС‚
+    // РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊСЃСЏ РґР»СЏ СЃРѕР·РґР°РЅРёСЏ РѕСЃС‚Р°Р»СЊРЅС‹С… РѕР±СЉРµРєС‚РѕРІ
     hr = g_pd3dDevice->CreateRenderTargetView(pBackBuffer, NULL, &g_pRenderTargetView);
     pBackBuffer->Release();
     if (FAILED(hr)) return hr;
 
-    // Подключаем объект заднего буфера к контексту устройства
+    // РџРѕРґРєР»СЋС‡Р°РµРј РѕР±СЉРµРєС‚ Р·Р°РґРЅРµРіРѕ Р±СѓС„РµСЂР° Рє РєРѕРЅС‚РµРєСЃС‚Сѓ СѓСЃС‚СЂРѕР№СЃС‚РІР°
     g_pImmediateContext->OMSetRenderTargets(1, &g_pRenderTargetView, NULL);
 
-    // Настройка вьюпорта
+    // РќР°СЃС‚СЂРѕР№РєР° РІСЊСЋРїРѕСЂС‚Р°
     D3D11_VIEWPORT vp;
     vp.Width = (FLOAT)width;
     vp.Height = (FLOAT)height;
@@ -208,7 +208,7 @@ HRESULT InitDevice()
     vp.MaxDepth = 1.0f;
     vp.TopLeftX = 0;
     vp.TopLeftY = 0;
-    // Подключаем вьюпорт к контексту устройства
+    // РџРѕРґРєР»СЋС‡Р°РµРј РІСЊСЋРїРѕСЂС‚ Рє РєРѕРЅС‚РµРєСЃС‚Сѓ СѓСЃС‚СЂРѕР№СЃС‚РІР°
     g_pImmediateContext->RSSetViewports(1, &vp);
 
     return S_OK;
@@ -216,10 +216,10 @@ HRESULT InitDevice()
 
 void CleanupDevice()
 {
-    // Сначала отключим контекст устройства, потом отпустим объекты.
+    // РЎРЅР°С‡Р°Р»Р° РѕС‚РєР»СЋС‡РёРј РєРѕРЅС‚РµРєСЃС‚ СѓСЃС‚СЂРѕР№СЃС‚РІР°, РїРѕС‚РѕРј РѕС‚РїСѓСЃС‚РёРј РѕР±СЉРµРєС‚С‹.
     if (g_pImmediateContext) g_pImmediateContext->ClearState();
-    // Порядок удаления имеет значение. Обратите внимание, мы удалеям
-    // эти объекты порядке, обратном тому, в котором создавали.
+    // РџРѕСЂСЏРґРѕРє СѓРґР°Р»РµРЅРёСЏ РёРјРµРµС‚ Р·РЅР°С‡РµРЅРёРµ. РћР±СЂР°С‚РёС‚Рµ РІРЅРёРјР°РЅРёРµ, РјС‹ СѓРґР°Р»РµСЏРј
+    // СЌС‚Рё РѕР±СЉРµРєС‚С‹ РїРѕСЂСЏРґРєРµ, РѕР±СЂР°С‚РЅРѕРј С‚РѕРјСѓ, РІ РєРѕС‚РѕСЂРѕРј СЃРѕР·РґР°РІР°Р»Рё.
     if (g_pRenderTargetView) g_pRenderTargetView->Release();
     if (g_pSwapChain) g_pSwapChain->Release();
     if (g_pImmediateContext) g_pImmediateContext->Release();
@@ -232,17 +232,17 @@ void CleanupDevice()
 
 void Render()
 {
-    // Просто очищаем задний буфер
-    float ClearColor[4] = { 0.0f, 0.0f, 1.0f, 1.0f }; // красный, зеленый, синий, альфа-канал
+    // РџСЂРѕСЃС‚Рѕ РѕС‡РёС‰Р°РµРј Р·Р°РґРЅРёР№ Р±СѓС„РµСЂ
+    float ClearColor[4] = { 0.0f, 0.0f, 1.0f, 1.0f }; // РєСЂР°СЃРЅС‹Р№, Р·РµР»РµРЅС‹Р№, СЃРёРЅРёР№, Р°Р»СЊС„Р°-РєР°РЅР°Р»
     g_pImmediateContext->ClearRenderTargetView(g_pRenderTargetView, ClearColor);
 
-    // Подключить к устройству рисования шейдеры
+    // РџРѕРґРєР»СЋС‡РёС‚СЊ Рє СѓСЃС‚СЂРѕР№СЃС‚РІСѓ СЂРёСЃРѕРІР°РЅРёСЏ С€РµР№РґРµСЂС‹
     g_pImmediateContext->VSSetShader(g_pVertexShader, NULL, 0);
     g_pImmediateContext->PSSetShader(g_pPixelShader, NULL, 0);
-    // Нарисовать три вершины
+    // РќР°СЂРёСЃРѕРІР°С‚СЊ С‚СЂРё РІРµСЂС€РёРЅС‹
     g_pImmediateContext->Draw(3, 0);
     
-    // Выбросить задний буфер на экран
+    // Р’С‹Р±СЂРѕСЃРёС‚СЊ Р·Р°РґРЅРёР№ Р±СѓС„РµСЂ РЅР° СЌРєСЂР°РЅ
     g_pSwapChain->Present(0, 0);
 }
 
@@ -269,12 +269,12 @@ HRESULT InitGeometry()
 {
     HRESULT hr = S_OK;
 
-    // Компиляция вершинного шейдера из файла
-    ID3DBlob* pVSBlob = NULL; // Вспомогательный объект - просто место в оперативной памяти
+    // РљРѕРјРїРёР»СЏС†РёСЏ РІРµСЂС€РёРЅРЅРѕРіРѕ С€РµР№РґРµСЂР° РёР· С„Р°Р№Р»Р°
+    ID3DBlob* pVSBlob = NULL; // Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹Р№ РѕР±СЉРµРєС‚ - РїСЂРѕСЃС‚Рѕ РјРµСЃС‚Рѕ РІ РѕРїРµСЂР°С‚РёРІРЅРѕР№ РїР°РјСЏС‚Рё
     hr = CompileShaderFromFile(L"urok2.fx", "VS", "vs_4_0", &pVSBlob);
     if (FAILED(hr))
     {
-        MessageBox(NULL, L"Невозможно скомпилировать файл FX. Пожалуйста, запустите данную программу из папки, содержащей файл FX.", L"Ошибка", MB_OK);
+        MessageBox(NULL, L"РќРµРІРѕР·РјРѕР¶РЅРѕ СЃРєРѕРјРїРёР»РёСЂРѕРІР°С‚СЊ С„Р°Р№Р» FX. РџРѕР¶Р°Р»СѓР№СЃС‚Р°, Р·Р°РїСѓСЃС‚РёС‚Рµ РґР°РЅРЅСѓСЋ РїСЂРѕРіСЂР°РјРјСѓ РёР· РїР°РїРєРё, СЃРѕРґРµСЂР¶Р°С‰РµР№ С„Р°Р№Р» FX.", L"РћС€РёР±РєР°", MB_OK);
         return hr;
     }
 
@@ -285,58 +285,58 @@ HRESULT InitGeometry()
         return hr;
     }
     
-    // Определение шаблона вершин
+    // РћРїСЂРµРґРµР»РµРЅРёРµ С€Р°Р±Р»РѕРЅР° РІРµСЂС€РёРЅ
     D3D11_INPUT_ELEMENT_DESC layout[] = {
         { "POSITION", 0, DXGI_FORMAT_R32G32B32_FLOAT, 0, 0, D3D11_INPUT_PER_VERTEX_DATA, 0 },
     };
     UINT numElements = ARRAYSIZE(layout);
 
-    // Создание шаблона вершин
+    // РЎРѕР·РґР°РЅРёРµ С€Р°Р±Р»РѕРЅР° РІРµСЂС€РёРЅ
     hr = g_pd3dDevice->CreateInputLayout(layout, numElements, pVSBlob->GetBufferPointer(),
         pVSBlob->GetBufferSize(), &g_pVertexLayout);
     pVSBlob->Release();
     if (FAILED(hr)) return hr;
 
-    // Подключение шаблона вершин
+    // РџРѕРґРєР»СЋС‡РµРЅРёРµ С€Р°Р±Р»РѕРЅР° РІРµСЂС€РёРЅ
     g_pImmediateContext->IASetInputLayout(g_pVertexLayout);
 
-    // Компиляция пиксельного шейдера из файла
+    // РљРѕРјРїРёР»СЏС†РёСЏ РїРёРєСЃРµР»СЊРЅРѕРіРѕ С€РµР№РґРµСЂР° РёР· С„Р°Р№Р»Р°
     ID3DBlob* pPSBlob = NULL;
     hr = CompileShaderFromFile(L"urok2.fx", "PS", "ps_4_0", &pPSBlob);
     if (FAILED(hr))
     {
-        MessageBox(NULL, L"Невозможно скомпилировать файл FX. Пожалуйста, запустите данную программу из папки, содержащей файл FX.", L"Ошибка", MB_OK);
+        MessageBox(NULL, L"РќРµРІРѕР·РјРѕР¶РЅРѕ СЃРєРѕРјРїРёР»РёСЂРѕРІР°С‚СЊ С„Р°Р№Р» FX. РџРѕР¶Р°Р»СѓР№СЃС‚Р°, Р·Р°РїСѓСЃС‚РёС‚Рµ РґР°РЅРЅСѓСЋ РїСЂРѕРіСЂР°РјРјСѓ РёР· РїР°РїРєРё, СЃРѕРґРµСЂР¶Р°С‰РµР№ С„Р°Р№Р» FX.", L"РћС€РёР±РєР°", MB_OK);
         return hr;
     }
 
-    // Создание пиксельного шейдера
+    // РЎРѕР·РґР°РЅРёРµ РїРёРєСЃРµР»СЊРЅРѕРіРѕ С€РµР№РґРµСЂР°
     hr = g_pd3dDevice->CreatePixelShader(pPSBlob->GetBufferPointer(), pPSBlob->GetBufferSize(), NULL, &g_pPixelShader);
     pPSBlob->Release();
     if (FAILED(hr)) return hr;
 
-    // Создание буфера вершин (три вершины треугольника)
+    // РЎРѕР·РґР°РЅРёРµ Р±СѓС„РµСЂР° РІРµСЂС€РёРЅ (С‚СЂРё РІРµСЂС€РёРЅС‹ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°)
     SimpleVertex vertices[3];
 
     vertices[0].Pos.x = 0.0f;  vertices[0].Pos.y = 0.5f;  vertices[0].Pos.z = 0.5f;
     vertices[1].Pos.x = 0.5f;  vertices[1].Pos.y = -0.5f;  vertices[1].Pos.z = 0.5f;
     vertices[2].Pos.x = -0.5f;  vertices[2].Pos.y = -0.5f;  vertices[2].Pos.z = 0.5f;
 
-    D3D11_BUFFER_DESC bd;  // Структура, описывающая создаваемый буфер
-    ZeroMemory(&bd, sizeof(bd));                    // очищаем ее
+    D3D11_BUFFER_DESC bd;  // РЎС‚СЂСѓРєС‚СѓСЂР°, РѕРїРёСЃС‹РІР°СЋС‰Р°СЏ СЃРѕР·РґР°РІР°РµРјС‹Р№ Р±СѓС„РµСЂ
+    ZeroMemory(&bd, sizeof(bd));                    // РѕС‡РёС‰Р°РµРј РµРµ
     bd.Usage = D3D11_USAGE_DEFAULT;
-    bd.ByteWidth = sizeof(SimpleVertex) * 3; // размер буфера = размер одной вершины * 3
-    bd.BindFlags = D3D11_BIND_VERTEX_BUFFER;          // тип буфера - буфер вершин
+    bd.ByteWidth = sizeof(SimpleVertex) * 3; // СЂР°Р·РјРµСЂ Р±СѓС„РµСЂР° = СЂР°Р·РјРµСЂ РѕРґРЅРѕР№ РІРµСЂС€РёРЅС‹ * 3
+    bd.BindFlags = D3D11_BIND_VERTEX_BUFFER;          // С‚РёРї Р±СѓС„РµСЂР° - Р±СѓС„РµСЂ РІРµСЂС€РёРЅ
     bd.CPUAccessFlags = 0;
 
-    D3D11_SUBRESOURCE_DATA InitData; // Структура, содержащая данные буфера
-    ZeroMemory(&InitData, sizeof(InitData)); // очищаем ее
-    InitData.pSysMem = vertices;               // указатель на наши 3 вершины
+    D3D11_SUBRESOURCE_DATA InitData; // РЎС‚СЂСѓРєС‚СѓСЂР°, СЃРѕРґРµСЂР¶Р°С‰Р°СЏ РґР°РЅРЅС‹Рµ Р±СѓС„РµСЂР°
+    ZeroMemory(&InitData, sizeof(InitData)); // РѕС‡РёС‰Р°РµРј РµРµ
+    InitData.pSysMem = vertices;               // СѓРєР°Р·Р°С‚РµР»СЊ РЅР° РЅР°С€Рё 3 РІРµСЂС€РёРЅС‹
 
-    // Вызов метода g_pd3dDevice создаст объект буфера вершин ID3D11Buffer
+    // Р’С‹Р·РѕРІ РјРµС‚РѕРґР° g_pd3dDevice СЃРѕР·РґР°СЃС‚ РѕР±СЉРµРєС‚ Р±СѓС„РµСЂР° РІРµСЂС€РёРЅ ID3D11Buffer
     hr = g_pd3dDevice->CreateBuffer(&bd, &InitData, &g_pVertexBuffer);
     if (FAILED(hr)) return hr;
 
-    // Установка буфера вершин:
+    // РЈСЃС‚Р°РЅРѕРІРєР° Р±СѓС„РµСЂР° РІРµСЂС€РёРЅ:
     UINT stride = sizeof(SimpleVertex);
     UINT offset = 0;
     g_pImmediateContext->IASetVertexBuffers(0, 1, &g_pVertexBuffer, &stride, &offset);

@@ -26,8 +26,13 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <FxCompile Include="urok2.fx">
+    <None Include="urok2.fx">
       <Filter>Shaders</Filter>
-    </FxCompile>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Testing unicode.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
