@@ -29,7 +29,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
-    <CharacterSet>MultiByte</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -70,12 +70,12 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Libs;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)\Includes;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\Libs\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Includes;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\Поделки\TestGame\DirectX11Game\DirectX11Game\Libs\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)\Includes;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\Libs\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
