@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 struct s {
-    const char* c = "Привет викошке."
+    const char* c = "РџСЂРёРІРµС‚ РІРёРєРѕС€РєРµ."
 };
