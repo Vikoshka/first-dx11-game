@@ -1,7 +1,4 @@
 ﻿  Engine.cpp
-  RenderWindow.cpp
-D:\Projects\DX11Game\first-dx11-game\DirectX11Game\RenderWindow.cpp(5,13): warning C4101: 'hr': unreferenced local variable
   WindowContainer.cpp
-  main.cpp
   Generating Code...
   DirectX11Game.vcxproj -> D:\Projects\DX11Game\first-dx11-game\Debug\DirectX11Game.exe

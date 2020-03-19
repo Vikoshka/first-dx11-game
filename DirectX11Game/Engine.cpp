@@ -26,5 +26,16 @@ void Engine::Update()
     while (!mouse.EventBufferIsEmpty())
     {
         MouseEvent e = mouse.ReadEvent();
+
+        if (e.GetType() == MouseEvent::EventType::RAW_MOVE)
+        {
+            std::string str = "X: ";
+            str += std::to_string(e.GetPosX());
+            str += ", ";
+            str += "Y: ";
+            str += std::to_string(e.GetPosY());
+            str += "\n";
+            OutputDebugStringA(str.c_str());
+        }
     }
 }

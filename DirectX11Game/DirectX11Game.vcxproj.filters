@@ -31,6 +31,12 @@
     <Filter Include="Source Files\Mouse">
       <UniqueIdentifier>{0aa81a24-f7ab-4d76-9bf5-3415a5d5885f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Graphics">
+      <UniqueIdentifier>{ceb5cfeb-4088-476a-8725-800d6daa8d8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Graphics">
+      <UniqueIdentifier>{3e48e024-6829-4174-b4f1-757a58bb9117}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -63,6 +69,12 @@
     <ClCompile Include="MouseEvent.cpp">
       <Filter>Source Files\Mouse</Filter>
     </ClCompile>
+    <ClCompile Include="Graphics.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="AdapterReader.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="StringConveter.h">
@@ -91,6 +103,12 @@
     </ClInclude>
     <ClInclude Include="MouseEvent.h">
       <Filter>Header Files\Mouse</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="AdapterReader.h">
+      <Filter>Header Files\Graphics</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
