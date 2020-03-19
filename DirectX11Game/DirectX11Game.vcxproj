@@ -135,7 +135,11 @@
   <ItemGroup>
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="ErrorLogger.cpp" />
+    <ClCompile Include="KeyboardClass.cpp" />
+    <ClCompile Include="KeyboardEvent.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MouseClass.cpp" />
+    <ClCompile Include="MouseEvent.cpp" />
     <ClCompile Include="RenderWindow.cpp" />
     <ClCompile Include="StringConverter.cpp" />
     <ClCompile Include="WindowContainer.cpp" />
@@ -143,6 +147,10 @@
   <ItemGroup>
     <ClInclude Include="Engine.h" />
     <ClInclude Include="ErrorLogger.h" />
+    <ClInclude Include="KeyboardClass.h" />
+    <ClInclude Include="KeyboardEvent.h" />
+    <ClInclude Include="MouseClass.h" />
+    <ClInclude Include="MouseEvent.h" />
     <ClInclude Include="RenderWindow.h" />
     <ClInclude Include="StringConveter.h" />
     <ClInclude Include="WindowContainer.h" />

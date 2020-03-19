@@ -1,2 +1,9 @@
-﻿  main.cpp
-  DirectX11Game.vcxproj -> D:\Projects\DX11Game\first-dx11-game\x64\Debug\DirectX11Game.exe
+﻿  Engine.cpp
+  main.cpp
+  MouseClass.cpp
+  MouseEvent.cpp
+  RenderWindow.cpp
+  WindowContainer.cpp
+  Generating Code...
+D:\Поделки\TestGame\DirectX11Game\DirectX11Game\RenderWindow.cpp(5,13): warning C4101:  'hr': unreferenced local variable
+  DirectX11Game.vcxproj -> D:\Поделки\TestGame\DirectX11Game\x64\Debug\DirectX11Game.exe

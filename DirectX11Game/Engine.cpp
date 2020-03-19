@@ -9,3 +9,22 @@ bool Engine::ProcessMessages()
 {
     return this->render_window.ProcessMessages();
 }
+
+void Engine::Update()
+{
+    while (!keyboard.CharBufferIsEmpty())
+    {
+        UCHAR ch = keyboard.ReadChar();
+    }
+
+    while (!keyboard.KeyBufferIsEmpty())
+    {
+        KeyboardEvent e = keyboard.ReadKey();
+        UCHAR keycode = e.GetKeyCode();
+    }
+
+    while (!mouse.EventBufferIsEmpty())
+    {
+        MouseEvent e = mouse.ReadEvent();
+    }
+}
