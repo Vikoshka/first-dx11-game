@@ -2,7 +2,19 @@
 
 bool Engine::Initialize(HINSTANCE hInstance, std::string window_title, std::string window_class, int width, int height)
 {
-    return this->render_window.Initialize(this, hInstance, window_title, window_class, width, height);
+    if (!this->render_window.Initialize(this, hInstance, window_title, window_class, width, height))
+    {
+        ErrorLogger::Log("Could not initialize window");
+        return false;
+    }
+
+    if (!graphics.Initialize(this->render_window.GetHWND(), width, height))
+    {
+        ErrorLogger::Log("Could not initialize graphics");
+        return false;
+    }
+
+    return true;
 }
 
 bool Engine::ProcessMessages()
@@ -38,4 +50,9 @@ void Engine::Update()
             OutputDebugStringA(str.c_str());
         }
     }
+}
+
+void Engine::RenderFrame()
+{
+    graphics.RenderFrame();
 }

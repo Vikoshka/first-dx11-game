@@ -1,7 +1,7 @@
 #pragma once
-#include "RenderWindow.h"
-#include "KeyboardClass.h"
-#include "MouseClass.h"
+#include "Graphics/RenderWindow.h"
+#include "InputOutput/KeyboardClass.h"
+#include "InputOutput/MouseClass.h"
 #include <memory>
 
 class WindowContainer

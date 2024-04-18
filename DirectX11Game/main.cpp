@@ -11,12 +11,16 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 
     //ErrorLogger::Log(S_OK, "Test Message");
 
-    Engine engine;
-    engine.Initialize(hInstance, "Test", "test_class", 800, 600);
+    CoInitialize(NULL);
 
-    while (engine.ProcessMessages() == true)
+    Engine engine;
+    if (engine.Initialize(hInstance, "Test", "test_class", 1024, 768))
     {
-        engine.Update();
+        while (engine.ProcessMessages() == true)
+        {
+            engine.Update();
+            engine.RenderFrame();
+        }
     }
 
     return 0;
